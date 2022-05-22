@@ -7,6 +7,7 @@
 body {
     font-family: "Poppins", sans-serif;
     overflow: hidden;
+    color: #fff;
 }
 
 .main {
@@ -15,6 +16,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: royalblue;
 }
 
 .title {
