@@ -1,4 +1,5 @@
-const btn = document.querySelector(".btn");
+const btnNext = document.querySelector(".btn-next");
+const btnStop = document.querySelector(".btn-stop");
 const numberContainer = document.querySelector(".number-container");
 const numbers = document.querySelectorAll(".number");
 const modalBtn = document.querySelector(".modal-btn");
@@ -76,11 +77,24 @@ const main = () => {
         });
     });
 
-    btn.addEventListener("click", () => {
+    btnNext.addEventListener("click", () => {
         move(tam - 1);
     });
 
-    setInterval(() => {
-        btn.click();
+    let anim = setInterval(() => {
+        btnNext.click();
     }, 10);
+    btnStop.addEventListener("click", () => {
+        if (btnStop.dataset.play == "true") {
+            btnStop.dataset.play = "false";
+            btnStop.innerText = "play!";
+            clearInterval(anim);
+        } else {
+            btnStop.dataset.play = "true";
+            btnStop.innerText = "stop";
+            anim = setInterval(() => {
+                btnNext.click();
+            }, 10);
+        }
+    });
 };
