@@ -80,7 +80,7 @@ const main = () => {
         move(tam - 1);
     });
 
-    // setInterval(() => {
-    //     btn.click();
-    // }, 10);
+    setInterval(() => {
+        btn.click();
+    }, 10);
 };

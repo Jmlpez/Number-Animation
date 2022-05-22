@@ -6,6 +6,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    overflow: hidden;
 }
 
 .main {
@@ -19,6 +20,7 @@ body {
 .title {
     margin: 1.5rem 0;
     font-size: 2.5rem;
+    text-align: center;
     animation: bounce 1.5s ease backwards infinite;
 }
 
@@ -46,6 +48,12 @@ body {
     height: 5rem;
     overflow-y: hidden;
     margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+    .number-container {
+        transform: scale(0.5);
+    }
 }
 
 .number-move {
