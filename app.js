@@ -34,6 +34,8 @@ modalBtn.addEventListener("click", () => {
 
 const main = () => {
     numberMove = [...document.querySelectorAll(".number-move")];
+    const numberHeight = parseInt(getComputedStyle(document.querySelector(".number")).height);
+    // console.log("Eeee", parseInt(numberHeight));
 
     let counters = new Array(numberMove.length),
         tam = numberMove.length;
@@ -47,7 +49,7 @@ const main = () => {
             return;
         }
         let xValue = idx * 4,
-            yValue = -95 * (counters[idx] + 1);
+            yValue = -numberHeight * (counters[idx] + 1);
         numberMove[idx].style.transform = `translate(${xValue}rem,${yValue}px)`;
         numberMove[idx].style.transition = "all 0.6s ease";
 
